@@ -87,7 +87,7 @@ resource "azurerm_virtual_machine" "main" {
   location              = data.azurerm_resource_group.main.location
   resource_group_name   = data.azurerm_resource_group.main.name
   network_interface_ids = [azurerm_network_interface.main.id]
-  vm_size               = var.vm_size
+  vm_size               = "Standard_B2s"
 
 
 
