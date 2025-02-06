@@ -15,7 +15,7 @@ resource "azurerm_public_ip" "main" {
   sku = "Basic"
 
   tags = {
-    component = "${var.component}-"
+    component = var.component
   }
 }
 
