@@ -1,18 +1,10 @@
-terraform {
-  required_providers {
-    null = {
-      source  = "hashicorp/null"
-      version = "3.2.2"
-    }
-  }
-}
 
 resource "azurerm_public_ip" "main" {
   name                = "${var.component}-pip"
   resource_group_name = data.azurerm_resource_group.main.name
   location            = data.azurerm_resource_group.main.location
   allocation_method   = "Dynamic"
-  sku = "Basic"
+  sku                 = "Basic"
 
   tags = {
     component = var.component

@@ -12,7 +12,7 @@ for_each = var.tool
 variable "tool" {
   default = {
 
-    vault  = {
+    vaultone  = {
 
       port = 8200
     }
